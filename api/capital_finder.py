@@ -24,7 +24,7 @@ class handler(BaseHTTPRequestHandler):
     
     elif 'capital' in my_dict:
         word = my_dict.get('capital')
-        url= 'https://restcountries.com/v3.1/name/'
+        url= 'https://restcountries.com/v3.1/capital/'
         res = requests.get(url+word)
         data = res.json()
         for word_data in data :
