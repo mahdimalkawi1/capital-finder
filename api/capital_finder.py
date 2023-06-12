@@ -18,11 +18,18 @@ class handler(BaseHTTPRequestHandler):
       url= 'https://restcountries.com/v3.1/name/'
       res = requests.get(url+word)
       data = res.json()
-    for word_data in data :
-      definition = word_data['capital'][0]
-      message = f"The Capital of {word} is {definition}"
+      for word_data in data :
+            definition = word_data['capital'][0]
+            message = f"The Capital of {word} is {definition}"
     
-
+    elif 'capital' in my_dict:
+        word = my_dict.get('capital')
+        url= 'https://restcountries.com/v3.1/name/'
+        res = requests.get(url+word)
+        data = res.json()
+        for word_data in data :
+            definition = word_data['capital'][0]
+            message = f"{word} is the Capital of {definition}"
 
 
 
