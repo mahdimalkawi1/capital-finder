@@ -7,8 +7,8 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    # list_of_dif=[]
-    # message="testing"
+    list_of_dif=[]
+    message="testing"
     url_path = self.path
     url_components = parse.urlsplit(url_path)
     query_list = parse.parse_qsl(url_components.query)
@@ -24,8 +24,8 @@ class handler(BaseHTTPRequestHandler):
     for word_data in data :
       definition = word_data['meanings'][0]['definitions'][0]['definition']
       message = str(definition)
-    #   list_of_dif.append(message)
-    # print(2222,list_of_dif)
+      list_of_dif.append(message)
+    print(2222,list_of_dif)
 
 
 
