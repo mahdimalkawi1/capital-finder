@@ -24,8 +24,8 @@ class handler(BaseHTTPRequestHandler):
     for word_data in data :
       definition = word_data['meanings'][0]['definitions'][0]['definition']
       message = str(definition)
-      list_of_dif.append(message)
-    print(2222,list_of_dif)
+    #   list_of_dif.append(message)
+    # print(2222,list_of_dif)
 
 
 
