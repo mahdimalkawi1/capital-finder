@@ -13,8 +13,8 @@ class handler(BaseHTTPRequestHandler):
     query_list = parse.parse_qsl(url_components.query)
     my_dict = dict(query_list)
 
-    if 'word' in my_dict:
-      word = my_dict.get('word')
+    if 'country' in my_dict:
+      word = my_dict.get('country')
       url= 'https://restcountries.com/v3.1/name/'
       res = requests.get(url+word)
       data = res.json()
