@@ -28,7 +28,7 @@ class handler(BaseHTTPRequestHandler):
         res = requests.get(url+word)
         data = res.json()
         for word_data in data :
-            definition = word_data['capital']
+            definition = word_data['name']['common']
             message = f"{word} is the Capital of {definition}"
 
 
