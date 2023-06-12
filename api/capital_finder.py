@@ -7,8 +7,8 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    list_of_dif=[]
-    message="testing"
+    # list_of_dif=[]
+    # message="testing"
     url_path = self.path
     url_components = parse.urlsplit(url_path)
     query_list = parse.parse_qsl(url_components.query)
